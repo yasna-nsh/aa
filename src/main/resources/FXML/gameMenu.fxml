@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.GameMenuFXMLController"
+      stylesheets="@../CSS/menuStyle.css, @../CSS/gameMenuStyle.css"
+      prefHeight="800.0" prefWidth="1000.0" alignment="CENTER" fx:id="mainPane">
+
+    <VBox fx:id="leftPane" styleClass="menuBox">
+        <VBox fx:id="controlPane" styleClass="menuBox">
+            <Button text="pause" styleClass="menuButton" onMouseClicked="#pauseGame"/>
+            <Button fx:id="restartButton" text="restart" styleClass="menuButton" onMouseClicked="#restartGame"/>
+            <Button fx:id="quitButton" text="quit game" styleClass="menuButton" onMouseClicked="#quitGame"/>
+        </VBox>
+        <VBox fx:id="infoPane" styleClass="menuBox">
+        </VBox>
+    </VBox>
+    <Pane fx:id="gamePane">
+    </Pane>
+</HBox>

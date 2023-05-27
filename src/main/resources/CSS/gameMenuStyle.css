@@ -1,0 +1,33 @@
+.ball {
+    -fx-fill: fg-color;
+}
+
+.ballNumber {
+    -fx-text-fill: bg-color;
+    -fx-font-family: preview;
+}
+
+.target-inside {
+    -fx-background-color: fg-color;
+}
+
+.target-outside {
+    -fx-fill: transparent;
+}
+
+.gameLabel {
+    -fx-padding: 5;
+    -fx-text-alignment: center;
+    -fx-text-fill: fg-color;
+    -fx-wrap-text: true;
+}
+
+.gameProgressBar {
+    -fx-accent: hl-color;
+    -fx-border-style: none;
+}
+
+.gameProgressBar > .bar {
+    -fx-background-insets: 0;
+    -fx-padding: 4;
+}

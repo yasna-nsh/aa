@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.ScoreboardMenuFXMLController"
+      stylesheets="@../CSS/menuStyle.css, @../CSS/settingsMenuStyle.css, @../CSS/scoreboardMenuStyle.css"
+      prefHeight="400.0" prefWidth="600.0" styleClass="menuBox">
+
+    <VBox styleClass="menuBox">
+        <VBox fx:id="difficultyFilterBox" styleClass="menuBox">
+        </VBox>
+        <Button text="back" styleClass="menuButton" onMouseClicked="#goBack"/>
+    </VBox>
+    <GridPane fx:id="scoreTable" styleClass="scoreTable" hgap="10">
+    </GridPane>
+</HBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.AvatarMenuFXMLController"
+      stylesheets="@../CSS/menuStyle.css, @../CSS/avatarMenuStyle.css"
+      prefHeight="500.0" prefWidth="800.0">
+    <VBox fx:id="leftPanel" id="leftPanel">
+        <Label text="choose your avatar" styleClass="avatarLabel"/>
+        <ImageView fx:id="currentAvatar" preserveRatio="true" fitWidth="100" fitHeight="100"/>
+        <Button text="Done" styleClass="menuButton" onMouseClicked="#completeRegister"/>
+        <Button text="Cancel" styleClass="menuButton" onMouseClicked="#cancelRegister"/>
+    </VBox>
+    <GridPane fx:id="avatarTable" styleClass="menuBox" id="avatarTable">
+    </GridPane>
+</HBox>

@@ -1,0 +1,20 @@
+HBox {
+    -fx-alignment: center;
+}
+
+.avatarLabel {
+    -fx-text-fill: fg-color;
+}
+
+#leftPanel {
+    -fx-min-width: 250;
+    -fx-alignment: center;
+    -fx-spacing: 20;
+}
+
+#avatarTable {
+    -fx-tile-alignment: center;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+    -fx-padding: 50;
+}

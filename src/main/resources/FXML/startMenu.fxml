@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.StartMenuFXMLController"
+            stylesheets="@../CSS/menuStyle.css"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <center>
+        <VBox styleClass="menuBox">
+            <Label text="aa" styleClass="header"/>
+            <Button text="play as a guest" styleClass="menuButton" onMouseClicked="#startGameAsAGuest"/>
+            <Button text="login" styleClass="menuButton" onMouseClicked="#goToLoginMenu"/>
+            <Button text="register" styleClass="menuButton" onMouseClicked="#goToRegisterMenu"/>
+            <Button text="exit" styleClass="menuButton" onMouseClicked="#exit"/>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.ProfileMenuFXMLController"
+            stylesheets="@../CSS/menuStyle.css"
+            prefHeight="500.0" prefWidth="600.0">
+
+    <top>
+        <VBox styleClass="menuBox">
+            <Label fx:id="messageLabel" styleClass="messageText"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox styleClass="menuBox">
+            <Button text="change username" styleClass="menuButton" onMouseClicked="#changeUsername"/>
+            <Button text="change password" styleClass="menuButton" onMouseClicked="#changePassword"/>
+            <Button text="change avatar" styleClass="menuButton" onMouseClicked="#changeAvatar"/>
+            <Button text="logout" styleClass="menuButton" onMouseClicked="#logout"/>
+            <Button text="delete account" styleClass="menuButton" onMouseClicked="#deleteAccount"/>
+            <Button text="back" styleClass="menuButton" onMouseClicked="#goBack" />
+        </VBox>
+    </center>
+</BorderPane>

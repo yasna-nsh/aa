@@ -1,0 +1,22 @@
+.scoreTable {
+    -fx-alignment: center;
+    -fx-vgap: 10;
+    -fx-hgap: 10;
+}
+
+.scoreTable > * {
+    -fx-text-fill: fg-color;
+    -fx-wrap-text: true;
+}
+
+.scoreTable > .first {
+    -fx-text-fill: #74d374;
+}
+
+.scoreTable > .second {
+    -fx-text-fill: #f3f35b;
+}
+
+.scoreTable > .third {
+    -fx-text-fill: #f58d9d;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.SettingsMenuFXMLController"
+      stylesheets="@../CSS/menuStyle.css, @../CSS/settingsMenuStyle.css"
+      prefHeight="400.0" prefWidth="1000.0" fx:id="mainPane">
+
+    <fx:define>
+        <ToggleGroup fx:id="colorGroup"/>
+        <ToggleGroup fx:id="musicMuteGroup"/>
+        <ToggleGroup fx:id="soundMuteGroup"/>
+    </fx:define>
+
+    <HBox styleClass="menuBox">
+        <VBox fx:id="musicBox" styleClass="menuBox">
+            <Label text="music" styleClass="header"/>
+        </VBox>
+        <VBox fx:id="twoChoiceBox" styleClass="menuBox">
+            <HBox fx:id="colorBox">
+                <Label text="color" styleClass="header"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$colorGroup" text="on" styleClass="option"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$colorGroup" text="off" styleClass="option"/>
+            </HBox>
+            <HBox fx:id="musicMuteBox">
+                <Label text="music" styleClass="header"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$musicMuteGroup" text="on" styleClass="option"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$musicMuteGroup" text="off" styleClass="option"/>
+            </HBox>
+            <HBox fx:id="soundMuteBox">
+                <Label text="sound" styleClass="header"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$soundMuteGroup" text="on" styleClass="option"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$soundMuteGroup" text="off" styleClass="option"/>
+            </HBox>
+        </VBox>
+        <VBox fx:id="difficultyBox" styleClass="menuBox">
+            <Label text="difficulty" styleClass="header"/>
+        </VBox>
+        <VBox fx:id="templateBox" styleClass="menuBox">
+            <Label text="template" styleClass="header"/>
+        </VBox>
+        <VBox fx:id="ballCountBox" styleClass="menuBox">
+            <Label fx:id="ballCountLabel" styleClass="header"/>
+        </VBox>
+    </HBox>
+    <HBox styleClass="menuBox">
+        <HBox fx:id="controlsPane" styleClass="menuBox">
+        </HBox>
+        <VBox styleClass="menuBox">
+            <Button text="done" styleClass="menuButton" onMouseClicked="#saveSettings"/>
+            <Button text="cancel" styleClass="menuButton" onMouseClicked="#exitSettings"/>
+        </VBox>
+    </HBox>
+</VBox>

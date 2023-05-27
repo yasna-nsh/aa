@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="view.RegisterMenuFXMLController"
+            stylesheets="@../CSS/menuStyle.css, @../CSS/avatarMenuStyle.css"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <VBox styleClass="menuBox">
+            <Label fx:id="messageLabel" styleClass="messageText"/>
+        </VBox>
+    </top>
+    <center>
+        <VBox styleClass="menuBox">
+            <TextField fx:id="username" promptText="username" styleClass="lineField"/>
+            <PasswordField fx:id="password" promptText="password" styleClass="lineField"/>
+            <PasswordField fx:id="passwordConfirmation" promptText="confirm password" styleClass="lineField"/>
+            <Button text="register" styleClass="menuButton" onMouseClicked="#register"/>
+            <Button text="back" styleClass="menuButton" onMouseClicked="#back"/>
+        </VBox>
+    </center>
+</BorderPane>

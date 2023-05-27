@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.PauseMenuFXMLController"
+      stylesheets="@../CSS/menuStyle.css, @../CSS/settingsMenuStyle.css"
+      prefHeight="400.0" prefWidth="800.0" styleClass="menuBox">
+
+    <fx:define>
+        <ToggleGroup fx:id="colorGroup"/>
+        <ToggleGroup fx:id="musicMuteGroup"/>
+        <ToggleGroup fx:id="soundMuteGroup"/>
+    </fx:define>
+
+    <Label fx:id="messageLabel" styleClass="messageText"/>
+    <HBox styleClass="menuBox">
+        <VBox styleClass="menuBox">
+            <Button text="continue" styleClass="menuButton" onMouseClicked="#continueGame"/>
+            <Button text="save game" styleClass="menuButton" onMouseClicked="#saveGame"/>
+            <Button text="restart" styleClass="menuButton" onMouseClicked="#restart"/>
+            <Button text="quit" styleClass="menuButton" onMouseClicked="#quit"/>
+        </VBox>
+        <VBox fx:id="musicBox" styleClass="menuBox">
+            <Label text="music" styleClass="header"/>
+        </VBox>
+        <VBox fx:id="twoChoiceBox" styleClass="menuBox">
+            <HBox fx:id="colorBox">
+                <Label text="color" styleClass="header"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$colorGroup" text="on" styleClass="option"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$colorGroup" text="off" styleClass="option"/>
+            </HBox>
+            <HBox fx:id="musicMuteBox">
+                <Label text="music" styleClass="header"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$musicMuteGroup" text="on" styleClass="option"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$musicMuteGroup" text="off" styleClass="option"/>
+            </HBox>
+            <HBox fx:id="soundMuteBox">
+                <Label text="sound" styleClass="header"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$soundMuteGroup" text="on" styleClass="option"/>
+                <ToggleButton focusTraversable="false" toggleGroup="$soundMuteGroup" text="off" styleClass="option"/>
+            </HBox>
+        </VBox>
+        <VBox fx:id="controlsInfoBox" styleClass="menuBox">
+            <Label text="controls" styleClass="header"/>
+        </VBox>
+    </HBox>
+</VBox>

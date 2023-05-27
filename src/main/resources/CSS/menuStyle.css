@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'preview';
+    src: url('../fonts/Preview.otf');
+}
+
+* {
+    bg-color: #141216;
+    hl-color: #7c6377;
+    fg-color: #f5ddcf;
+    lose-color: #602629;
+    win-color: #2c381f;
+}
+
+.root {
+    -fx-background-color: bg-color;
+    -fx-font-weight: bold;
+}
+
+.menuBox {
+    -fx-padding: 15;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+.lineField {
+    -fx-max-width: 250;
+    -fx-border-style: hidden hidden solid hidden;
+    -fx-border-color: fg-color;
+    -fx-background-color: transparent;
+    -fx-highlight-fill: hl-color;
+    -fx-text-fill: fg-color;
+}
+
+.lineField:focused {
+    -fx-prompt-text-fill: derive(-fx-control-inner-background, -30%);
+}
+
+.menuButton {
+    -fx-background-color: fg-color;
+    -fx-text-fill: bg-color;
+    -fx-border-style: none;
+    -fx-background-radius: 30;
+    -fx-padding: 8 20;
+}
+
+.menuButton:hover {
+    -fx-background-color: hl-color;
+}
+
+.menuButton:pressed {
+    -fx-background-color: fg-color;
+}
+
+.menuLink {
+    -fx-text-fill: fg-color;
+}
+
+.menuLink:hover, pressed {
+    -fx-text-fill: hl-color;
+    -fx-underline: false;
+    -fx-border-style: hidden;
+}
+
+.messageText {
+    -fx-padding: 30;
+    -fx-text-alignment: center;
+    -fx-text-fill: fg-color;
+    -fx-wrap-text: true;
+}
+
+.header {
+    -fx-text-fill: fg-color;
+    -fx-padding: 20;
+    -fx-font-size: 40;
+    -fx-font-family: preview;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="view.CustomizeMenuFXMLController"
+      stylesheets="@../CSS/menuStyle.css, @../CSS/customizeLevelMenuStyle.css"
+      minHeight="400.0" minWidth="700.0" alignment="CENTER">
+
+    <VBox fx:id="difficultyBox" styleClass="menuBox">
+        <Label text="difficulty" styleClass="messageText"/>
+    </VBox>
+    <VBox fx:id="templateBox" styleClass="menuBox">
+        <Label text="template" styleClass="messageText"/>
+    </VBox>
+    <VBox fx:id="ballCountBox" styleClass="menuBox">
+        <Label fx:id="ballCountLabel" text="ball count = " styleClass="messageText"/>
+    </VBox>
+    <VBox styleClass="menuBox">
+        <Button text="done" styleClass="menuButton" onMouseClicked="#done"/>
+        <Button text="cancel" styleClass="menuButton" onMouseClicked="#cancel"/>
+    </VBox>
+</HBox>

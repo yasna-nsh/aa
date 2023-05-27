@@ -1,0 +1,25 @@
+.header {
+    -fx-padding: 5;
+    -fx-text-alignment: center;
+    -fx-text-fill: fg-color;
+    -fx-font-size: 12;
+    -fx-wrap-text: true;
+}
+
+.option {
+    -fx-background-color: transparent;
+    -fx-border-style: none;
+    -fx-text-fill: hl-color;
+}
+
+.option:selected {
+    -fx-text-fill: fg-color;
+}
+
+.selected {
+    -fx-text-fill: fg-color;
+}
+
+.keyLabel {
+    -fx-text-fill: hl-color;
+}
