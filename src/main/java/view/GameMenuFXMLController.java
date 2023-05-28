@@ -386,6 +386,8 @@ public class GameMenuFXMLController {
     public void pauseGame() throws Exception {
         pauseAllActions();
         ignoreKeyInput();
+        int timeSpent = Game.getInitialTimeInSecs() - timeLeft;
+        GameController.getInstance().getCurrentGame().setTimeSpent(timeSpent);
         new PauseMenu().start(StartMenu.stage);
     }
 

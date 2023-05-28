@@ -9,7 +9,7 @@ public class Game {
     private static final int ballScore = 50;
     private static final int phaseScore = 200;
     private static final int timeScoreCoefficient = 10;
-    private Difficulty difficulty;
+    private final Difficulty difficulty;
     private final GameTemplate template;
     private final int ballCount;
     private int phase;

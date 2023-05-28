@@ -112,6 +112,7 @@ public class AvatarMenuFXMLController {
             new RegisterMenu(true).start(StartMenu.stage);
         } else {
             User.getCurrentUser().setAvatarFilePath(currentAvatar.getImage().getUrl());
+            DataHandler.getInstance().updateDatabase();
             new ProfileMenu("avatar changed successfully").start(StartMenu.stage);
         }
     }
