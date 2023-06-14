@@ -105,11 +105,11 @@ public class User {
                 if (gameScoringData != null) result.add(gameScoringData);
             }
         }
-        result.sort((o1, o2) -> {
-            if (o1.getScore() > o2.getScore() || o1.getScore() == o2.getScore() && o1.getTimeSpent() < o2.getTimeSpent() || o1.getUsername().compareTo(o2.getUsername()) < 0)
+        result.sort((GameScoringData o1, GameScoringData o2) -> {
+            if (o1.getScore() == o2.getScore() && o1.getTimeSpent() == o2.getTimeSpent())
+                return o1.getUsername().compareTo(o2.getUsername());
+            if (o1.getScore() > o2.getScore() || o1.getScore() == o2.getScore() && o1.getTimeSpent() < o2.getTimeSpent())
                 return -1;
-            else if (o1.getScore() == o2.getScore() && o1.getTimeSpent() == o2.getTimeSpent() && o1.getUsername().equals(o2.getUsername()))
-                return 0;
             return 1;
         });
         return result;
